@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "skynet",
+  "version": "0.0.1",
+  "description": "A custom new tab page with a search bar and logo.",
+  "permissions": ["storage"],
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  },
+  "browser_action": {
+    "default_title": "skynet"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["script.js"]
+    }
+  ],
+  "content_security_policy": "script-src 'self'; object-src 'self'"
+}
