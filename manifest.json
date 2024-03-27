@@ -1,5 +1,5 @@
 {
-  "manifest_version": 3,
+  "manifest_version": 2,
   "name": "skynet",
   "version": "0.0.1",
   "description": "A custom new tab page with a search bar and logo.",
@@ -8,12 +8,7 @@
     "newtab": "newtab.html"
   },
   "browser_action": {
-    "default_title": "skynet",
-    "default_icon": {
-      "16": "icon16.png",   
-      "48": "icon48.png",   
-      "128": "https://upload.wikimedia.org/wikipedia/commons/2/20/Skynet_icon_transparent_background.png"  
-    }
+    "default_title": "skynet"
   },
   "content_scripts": [
     {
