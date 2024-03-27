@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', function() {
           weatherInfo.innerHTML = '<p>Error fetching weather data</p>';
       });
 });
-document.getElementById('script-file').addEventListener('change', function(event) {
+/*document.getElementById('script-file').addEventListener('change', function(event) {
   const file = event.target.files[0];
   if (file) {
       const reader = new FileReader();
@@ -182,4 +182,4 @@ function runScript(scriptContent) {
       console.error('Error:', error);
       document.getElementById('output').textContent = 'An error occurred while running the script.';
   });
-}
+}*/
