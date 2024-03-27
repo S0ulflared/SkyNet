@@ -1,21 +1,21 @@
 body {
-    background-color: #000000;
-    color: #FFFFFF;
-    font-family: 'Monaco', monospace;
-    margin: 0;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1"><filter id="distort"><feTurbulence type="fractalNoise" baseFrequency=".5" numOctaves="10" result="warp"></feTurbulence><feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="15" in="SourceGraphic" result="warp"></feDisplacementMap><feBlend mode="multiply" in="warp" in2="SourceGraphic"></feBlend></filter></svg>') 0 0 repeat;
-    z-index: 9997;
+  background-color: #000000;
+  color: #FFFFFF;
+  font-family: 'Monaco', monospace;
+  margin: auto; /* Adjusted to 'auto' to center elements */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1"><filter id="distort"><feTurbulence type="fractalNoise" baseFrequency=".5" numOctaves="10" result="warp"></feTurbulence><feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="15" in="SourceGraphic" result="warp"></feDisplacementMap><feBlend mode="multiply" in="warp" in2="SourceGraphic"></feBlend></filter></svg>') 0 0 repeat;
+  z-index: 9997;
+  width: 90%;
 }
 
 .logo {
@@ -122,3 +122,23 @@ nav a {
       background-position: 0 -10px;
     }
   }
+  #rss-widget {
+    max-width: 300px;
+    margin: 20px 20px 20px 0;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-y: auto; /* Add scrollbar for overflow */
+    background-color: #000000;
+   
+}
+#rss-widget h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+#rss-list {
+    list-style: none;
+    padding: 0;
+}
+#rss-list li {
+    margin-bottom: 10px;
+}

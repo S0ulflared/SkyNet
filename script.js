@@ -50,3 +50,29 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 })
+const rssUrl = "https://rss.nytimes.com/services/xml/rss/nyt/US.xml";
+
+fetch(rssUrl)
+    .then(response => response.text())
+    .then(data => {
+        const parser = new DOMParser();
+        const xml = parser.parseFromString(data, "text/xml");
+        const items = xml.querySelectorAll("item");
+
+        const rssList = document.getElementById("rss-list");
+        items.forEach(item => {
+            const title = item.querySelector("title").textContent;
+            const link = item.querySelector("link").textContent;
+
+            const listItem = document.createElement("li");
+            const anchor = document.createElement("a");
+            anchor.textContent = title;
+            anchor.href = link;
+            anchor.target = "_blank";
+            listItem.appendChild(anchor);
+            rssList.appendChild(listItem);
+        });
+    })
+    .catch(error => {
+        console.log("Error fetching RSS feed: ", error);
+    });
