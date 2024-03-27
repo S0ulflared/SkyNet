@@ -1,6 +1,6 @@
 # Skynet
 
-Skynet is a chrome extension aimed at creating a user interface with a vintage CRT-like display effect.
+Skynet is a chrome extension aimed at creating a user interface inspired by the rogue ai from terminator with a vintage CRT-like display effect.
 
 ## Description
 
