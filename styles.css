@@ -129,7 +129,7 @@ nav a {
     max-width: 300px;
     color:#ff0000;
     margin: 20px 20px 20px 0;
-    padding: 10px;
+    padding: 20px;
     border-radius: 5px;
     overflow-y: auto; /* Add scrollbar for overflow */
     background-color: #000000;
@@ -368,4 +368,13 @@ animation-delay: 2.5s;
   
   .rss-link.clicked {
     color: #ffffff;
+  }
+  .weather-widget {
+    max-width: 50px;
+    margin: 20px;
+    padding: 20px;
+  }
+  
+  #weather-info {
+    text-align: center;
   }

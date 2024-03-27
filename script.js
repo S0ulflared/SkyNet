@@ -121,3 +121,28 @@ document.addEventListener('DOMContentLoaded', function() {
           }
         });
       });
+      document.addEventListener('DOMContentLoaded', function() {
+        const weatherInfo = document.getElementById('weather-info');
+        const apiUrl = 'https://api.weather.gov/gridpoints/FFC/57,62/forecast';
+    
+        fetch(apiUrl)
+          .then(response => response.json())
+          .then(data => {
+            // Extract relevant weather information
+            const temperature = data.properties.periods[0].temperature;
+            const weatherConditions = data.properties.periods[0].shortForecast;
+    
+            // Create HTML content to display weather information
+            const weatherHTML = `
+              <p>Temperature: ${temperature}°F</p>
+              <p>Weather Conditions: ${weatherConditions}</p>
+            `;
+    
+            // Update weather-info div with weather information
+            weatherInfo.innerHTML = weatherHTML;
+          })
+          .catch(error => {
+            console.log('Error fetching weather data:', error);
+            weatherInfo.innerHTML = '<p>Error fetching weather data</p>';
+          });
+    });
