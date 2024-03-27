@@ -21,7 +21,7 @@ Skynet offers a retro-styled interface reminiscent of old CRT monitors. It provi
 
 ## Usage
 
-To use Skynet, simply open the `index.html` file in your web browser. Then, you can:
+To use Skynet, simply load as a chrome extension in your web browser. Then, you can:
 
 1. Enter your query in the search bar and press Enter to perform a Google search.
 2. View your past search history and click on an item to perform the search again.
