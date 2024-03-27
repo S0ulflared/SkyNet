@@ -16,6 +16,8 @@ body {
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1"><filter id="distort"><feTurbulence type="fractalNoise" baseFrequency=".5" numOctaves="10" result="warp"></feTurbulence><feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="15" in="SourceGraphic" result="warp"></feDisplacementMap><feBlend mode="multiply" in="warp" in2="SourceGraphic"></feBlend></filter></svg>') 0 0 repeat;
   z-index: 9997;
   width: 100%;
+  overflow: scroll;
+  backdrop-filter: blur(3px);
 }
 
 .logo {
@@ -310,3 +312,60 @@ animation-delay: 2.5s;
 .nav-links a{
     margin: 0 10px;
 }
+.widget-container {
+    position: fixed;
+    top: 20px; /* Adjust as needed */
+    left: 20px; /* Adjust as needed */
+    z-index: 9998; 
+  }
+  
+  .todo-widget {
+    max-width: 300px;
+    margin: 20px;
+  }
+  
+  .todo-widget input[type="text"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .todo-widget button {
+    display: block;
+    margin: 10px auto;
+  }
+  
+  .todo-widget ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .todo-widget li {
+    margin-bottom: 5px;
+  }
+  
+  .todo-widget li input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  .rss-container {
+    position: fixed; /* Change position to fixed */
+    top: 20px; /* Adjust as needed */
+    right: 19px;
+    bottom: 30%;
+    width: 300px; /* Set width to 300px */
+    height: 350px; /* Set height to 350px */
+    overflow: auto;
+    padding-right:20px;
+}
+.rss-container h2{
+    align-items: center;
+}
+.rss-link {
+    color: #ff0000;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .rss-link.clicked {
+    color: #ffffff;
+  }

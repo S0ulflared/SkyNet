@@ -50,32 +50,35 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 })
-const rssUrl = "https://rss.nytimes.com/services/xml/rss/nyt/US.xml";
+document.addEventListener('DOMContentLoaded', function() {
+    const rssUrl = "https://rss.nytimes.com/services/xml/rss/nyt/US.xml";
+    const rssList = document.getElementById("rss-list");
 
-fetch(rssUrl)
-    .then(response => response.text())
-    .then(data => {
-        const parser = new DOMParser();
-        const xml = parser.parseFromString(data, "text/xml");
-        const items = xml.querySelectorAll("item");
+    fetch(rssUrl)
+        .then(response => response.text())
+        .then(data => {
+            const parser = new DOMParser();
+            const xml = parser.parseFromString(data, "text/xml");
+            const items = xml.querySelectorAll("item");
 
-        const rssList = document.getElementById("rss-list");
-        items.forEach(item => {
-            const title = item.querySelector("title").textContent;
-            const link = item.querySelector("link").textContent;
+            items.forEach(item => {
+                const title = item.querySelector("title").textContent;
+                const link = item.querySelector("link").textContent;
 
-            const listItem = document.createElement("li");
-            const anchor = document.createElement("a");
-            anchor.textContent = title;
-            anchor.href = link;
-            anchor.target = "_blank";
-            listItem.appendChild(anchor);
-            rssList.appendChild(listItem);
+                const listItem = document.createElement("li");
+                const anchor = document.createElement("a");
+                anchor.textContent = title;
+                anchor.href = link;
+                anchor.target = "_blank";
+                anchor.classList.add("rss-link"); // Add .rss-link class to the anchor
+                listItem.appendChild(anchor);
+                rssList.appendChild(listItem);
+            });
+        })
+        .catch(error => {
+            console.log("Error fetching RSS feed: ", error);
         });
-    })
-    .catch(error => {
-        console.log("Error fetching RSS feed: ", error);
-    });
+});
     document.addEventListener('DOMContentLoaded', function () {
         const logo = document.querySelector('.logo');
         const navLinks = document.querySelector('.nav-links');
@@ -85,3 +88,36 @@ fetch(rssUrl)
             navLinks.classList.toggle('show');
         });
     });
+    document.addEventListener('DOMContentLoaded', function() {
+        const taskInput = document.getElementById('taskInput');
+        const addTaskBtn = document.getElementById('addTaskBtn');
+        const taskList = document.getElementById('taskList');
+      
+        addTaskBtn.addEventListener('click', function() {
+          const taskText = taskInput.value.trim();
+      
+          if (taskText !== '') {
+            const taskItem = document.createElement('li');
+            const checkbox = document.createElement('input');
+            checkbox.type = 'checkbox';
+            const taskLabel = document.createElement('span');
+            taskLabel.textContent = taskText;
+      
+            taskItem.appendChild(checkbox);
+            taskItem.appendChild(taskLabel);
+            taskList.appendChild(taskItem);
+      
+            taskInput.value = ''; // Clear the input field after adding task
+          }
+        });
+      
+        taskList.addEventListener('change', function(event) {
+          if (event.target.tagName === 'INPUT' && event.target.type === 'checkbox') {
+            const checkbox = event.target;
+            const taskItem = checkbox.parentElement;
+            if (checkbox.checked) {
+              taskList.removeChild(taskItem);
+            }
+          }
+        });
+      });
