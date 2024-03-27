@@ -142,3 +142,14 @@ nav a {
 #rss-list li {
     margin-bottom: 10px;
 }
+.info {
+
+  display: block;
+}
+.info-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  margin-bottom: 3px;
+}
