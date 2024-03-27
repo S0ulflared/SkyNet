@@ -25,6 +25,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .logo img {
@@ -274,4 +275,37 @@ animation-delay: 2.5s;
   position: absolute;
   top: 0;
   right: 0;
+}
+.nav-links{
+    display:none;
+    position:relative;
+    top:0;
+    left:0;
+    right: 0;
+    bottom: 90%;
+    margin: auto;
+
+    align-items: left;
+    transform: translate(-50%, -50%);
+    animation:navSwoop 0.5s ease forwards;
+
+}
+.nav-links.show{
+    display:flex;
+    flex-direction: row;
+    
+
+}
+@keyframes navSwoop{
+    from{
+        transform:translateY(-100%) scale(0);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+.nav-links a{
+    margin: 0 10px;
 }

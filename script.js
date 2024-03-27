@@ -76,3 +76,12 @@ fetch(rssUrl)
     .catch(error => {
         console.log("Error fetching RSS feed: ", error);
     });
+    document.addEventListener('DOMContentLoaded', function () {
+        const logo = document.querySelector('.logo');
+        const navLinks = document.querySelector('.nav-links');
+    
+        logo.addEventListener('click', function () {
+            // Toggle the 'show' class on the navigation links
+            navLinks.classList.toggle('show');
+        });
+    });
