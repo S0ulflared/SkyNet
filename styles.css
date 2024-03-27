@@ -370,11 +370,15 @@ animation-delay: 2.5s;
     color: #ffffff;
   }
   .weather-widget {
-    max-width: 50px;
+    position: fixed;
+    bottom: 20px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    max-width: 300px;
     margin: 20px;
     padding: 20px;
+    border-radius: 5px;
+  }
+  #weather-info {
+    text-align: left;
   }
   
-  #weather-info {
-    text-align: center;
-  }

@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
-})
+
 document.addEventListener('DOMContentLoaded', function() {
     const rssUrl = "https://rss.nytimes.com/services/xml/rss/nyt/US.xml";
     const rssList = document.getElementById("rss-list");
@@ -146,3 +146,4 @@ document.addEventListener('DOMContentLoaded', function() {
             weatherInfo.innerHTML = '<p>Error fetching weather data</p>';
           });
     });
+})
