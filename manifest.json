@@ -13,7 +13,7 @@
     "128": "icon.png"
   },
   "browser_action": {
-    "default_title": "skynet"
+    "default_title": "SkyNet Neural Network"
   },
   "content_scripts": [
     {
