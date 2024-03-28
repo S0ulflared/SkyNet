@@ -310,6 +310,7 @@ animation-delay: 2.5s;
     margin: 0 10px;
 }
 .widget-container {
+  display: none;
     position: fixed;
     top: 20px; /* Adjust as needed */
     left: 20px; /* Adjust as needed */
@@ -346,6 +347,7 @@ animation-delay: 2.5s;
     margin-right: 5px;
   }
   .rss-container {
+    display:none;
     position: fixed; /* Change position to fixed */
     top: 20px; /* Adjust as needed */
     right: 19px;
