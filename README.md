@@ -33,11 +33,11 @@ To use Skynet, simply load as a chrome extension in your web browser. Then, you 
 To install Skynet locally, follow these steps:
 
 1. Clone the repository:
-   git clone https://github.com/your-username/skynet.git
+   git clone https://github.com/your-username/skynet.git amd customize as needed 
 2. go to chrome://extensions and enable developer mode.
 3. select "load unpacked extension"
 4. open the directory
-5. profit
+
 ## Credits
 
 - Terminator Logo: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Skynet_icon_transparent_background.png)
