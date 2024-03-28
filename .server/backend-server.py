@@ -26,4 +26,4 @@ def run_script():
         return jsonify({'error': 'No script content provided'}), 400
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
