@@ -3,13 +3,14 @@ import subprocess
 import os
 
 app = Flask(__name__)
+script = 'temp_script.py'
 
 @app.route('/run_script', methods=['POST'])
 def run_script():
     script_content = request.json.get('script_content')
     if script_content:
         # Save the script content to a temporary file
-        with open('temp_script.py', 'w') as f:
+        with open(script, 'w') as f:
             f.write(script_content)
         
         # Run the script and capture the output
@@ -19,7 +20,7 @@ def run_script():
             output = e.output
         
         # Remove the temporary file
-        os.remove('temp_script.py')
+        os.remove(script)
         
         return jsonify({'output': output})
     else:
