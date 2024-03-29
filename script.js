@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
       searchHistory.innerHTML = ''; // Clear previous history
       historyItems.forEach(term => {
           const item = document.createElement('div');
-          item.innerHTML = `User: -> <span class="search-history-item">${term}</span>`;
+          item.innerHTML = `User:$  <span class="search-history-item">${term}</span>`;
           item.addEventListener('click', () => {
               searchInput.value = term;
               performSearch(term);
