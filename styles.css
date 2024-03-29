@@ -81,6 +81,7 @@ body {
     justify-content: center;
     margin-bottom: 20px;
     border-radius: 30px;
+    animation: flickerAnimation 1.5s infinite;
 }
 
 .search-input {
